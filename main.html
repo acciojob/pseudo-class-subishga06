@@ -2,32 +2,52 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
-	<style>
-		#container {
-			margin: 20px;
-		}
+    <title>CSS Pseudo-Elements Example</title>
+    <style>
+        /* Styles for the main container */
+        #container {
+            /* Set a margin of 20px to the container. */
+            margin: 20px;
+            /* Optional: Add border/padding for better visibility of the main content */
+            border: 1px solid #ccc; 
+            padding: 10px;
+            display: inline-block; /* Makes the border fit the content */
+            font-family: Arial, sans-serif;
+            color: #333; /* Default color for the main content */
+        }
 
-		#container::before {
-			content: "This is before content ";
-			color: #f00;
-			font-size: 20px;
-		}
+        /* Pseudo-element for content *before* the main content */
+        #container::before {
+            /* Use a CSS pseudo-element to insert content before the main content of the container. */
+            content: "This is before content "; 
+            /* The content inserted before and after should be displayed in red color (#f00). */
+            color: #f00; 
+            /* The font size of the inserted content should be 20px. */
+            font-size: 20px;
+            /* Add a line break after the before content for better separation */
+            display: block; 
+            font-weight: bold;
+        }
 
-		#container::after {
-			content: " This is after content";
-			color: #f00;
-			font-size: 20px;
-		}
-	</style>
+        /* Pseudo-element for content *after* the main content */
+        #container::after {
+            /* Use another CSS pseudo-element to insert content after the main content of the container. */
+            content: " This is after content"; 
+            /* The content inserted before and after should be displayed in red color (#f00). */
+            color: #f00;
+            /* The font size of the inserted content should be 20px. */
+            font-size: 20px;
+            /* Add a line break before the after content for better separation */
+            display: block; 
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
 	
-	<div id="container">This is the main container content.</div>
+    <div id="container">This is the main container content.</div>
 
-	<script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
